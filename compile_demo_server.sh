@@ -1,0 +1,1 @@
+g++ --std=c++11 `pkg-config --cflags opencv` demo_server.cpp `pkg-config --libs opencv` -o demo_server
