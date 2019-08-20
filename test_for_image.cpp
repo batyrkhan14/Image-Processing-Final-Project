@@ -268,7 +268,7 @@ void compress(Mat &frame, string filename){
 	write(compressed, (short)w);
 	write(compressed, (short)h);
 	rle(seq, compressed);
-	//write_to_file(compressed, filename);
+	write_to_file(compressed, filename);
 }
 void decompress(string filename){
 	vector<char> compressed;
@@ -288,17 +288,14 @@ void decompress(string filename){
 	//inv_transform(y, u, v);
 	Mat frame(h, w, CV_8UC3, Scalar(255));
 	inv_resolution_reduction(frame, y, u, v);		
-	//imwrite("dct.bmp", frame);
+	imwrite("dct.bmp", frame);
 }
 int main(int argc, char* argv[]) {
 	init();
 	Mat image = imread("original.bmp");
 	//imwrite("orig.jpg", image);
-	clock_t begin = clock();
-	compress(image, "test2.pku");
-	clock_t end = clock();
-	cout << ((double)end - (double)begin)/CLOCKS_PER_SEC << endl;
-	//decompress("compressed.pku");
+	compress(image, "compressed.pku");
+	decompress("compressed.pku");
 	
 	/*VideoCapture cap(0);
 	if (!cap.isOpened()) {
