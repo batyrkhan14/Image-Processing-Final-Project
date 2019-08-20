@@ -9,3 +9,4 @@ server_with_compression.cpp - compresses each frame of video stream from web cam
 
 client_with_compression.cpp - receives compressed frames, decompresses and shows to user
 
+final-project-robt_2.pdf - project report
