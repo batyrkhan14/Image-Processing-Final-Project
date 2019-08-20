@@ -1,1 +1,0 @@
-g++ --std=c++11 `pkg-config --cflags opencv` test_for_image.cpp `pkg-config --libs opencv` -o test_for_image

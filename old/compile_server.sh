@@ -1,1 +1,0 @@
-g++ --std=c++11 `pkg-config --cflags opencv` server_with_compression.cpp `pkg-config --libs opencv` -o server
