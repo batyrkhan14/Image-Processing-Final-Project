@@ -4,6 +4,8 @@ Video streaming application with MPEG-like compression. Video is streamed from s
 
 ## Files
 test_for_image.cpp - compresses single file
+
 server_with_compression.cpp - compresses each frame of video stream from web cam and sends to sender
+
 client_with_compression.cpp - receives compressed frames, decompresses and shows to user
 
